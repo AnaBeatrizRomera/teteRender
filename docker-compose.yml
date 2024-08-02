@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  banco:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: anabeatrizromera/banco:1.0
+    environment:
+      POSTGRES_PASSWORD:  "Postgres2023"
+    ports:
+      - "8080:5432"
+    volumes:
+      - ./Scripts/:/scripts
